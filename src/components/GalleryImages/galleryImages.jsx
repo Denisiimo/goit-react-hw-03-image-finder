@@ -4,6 +4,7 @@ import { GalleryItem } from './GalleryItem/galleryItem';
 import { GalleryList, NotFound } from './galleryImages.styled';
 import { ButtonMore } from 'components/Button/buttonMore';
 import { Loader } from 'components/Loader/loader';
+import PropTypes from 'prop-types';
 
 export class GalleryImages extends PureComponent {
   state = {
@@ -94,4 +95,8 @@ export class GalleryImages extends PureComponent {
       </>
     );
   }
+}
+
+GalleryImages.propTypes = {
+  query: PropTypes.string.isRequired
 }

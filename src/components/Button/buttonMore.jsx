@@ -1,4 +1,5 @@
 import { ButtonMoreM, BoxM } from './buttonMore.styled';
+import PropTypes from 'prop-types';
 
 export const ButtonMore = ({ onClick }) => {
   return (
@@ -9,3 +10,7 @@ export const ButtonMore = ({ onClick }) => {
     </>
   );
 };
+
+ButtonMore.propTypes = {
+  onClick: PropTypes.func.isRequired
+}

@@ -3,6 +3,7 @@ import { PureComponent } from 'react';
 import { ButtonSearch } from 'components/Button/buttonSearch';
 import { SearchBar, SearchForm } from './searchbar.styled';
 import { InputValue } from 'components/InputValue/inputValue';
+import PropTypes from 'prop-types';
 
 export class Searchbar extends PureComponent {
   state = {
@@ -47,4 +48,8 @@ export class Searchbar extends PureComponent {
       </>
     );
   }
+}
+
+Searchbar.propTypes = {
+  onSubmit: PropTypes.func.isRequired
 }

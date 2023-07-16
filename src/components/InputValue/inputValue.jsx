@@ -1,5 +1,6 @@
 import { PureComponent } from 'react';
 import { InputVal } from './inputValue.styled';
+import PropTypes from 'prop-types';
 
 export class InputValue extends PureComponent {
   render() {
@@ -16,4 +17,9 @@ export class InputValue extends PureComponent {
       </>
     );
   }
+}
+
+InputValue.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired
 }

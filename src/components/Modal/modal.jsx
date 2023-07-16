@@ -1,5 +1,6 @@
 import { PureComponent } from 'react';
 import { Overlay, ModalS, ExitCross } from './modal.styled';
+import PropTypes from 'prop-types';
 
 export class Modal extends PureComponent {
   componentDidMount() {
@@ -35,4 +36,9 @@ export class Modal extends PureComponent {
       </>
     );
   }
+}
+
+Modal.propTypes = {
+  largeImageURL: PropTypes.string.isRequired,
+  onClose: PropTypes.func.isRequired,
 }
